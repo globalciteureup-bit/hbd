@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎂</title>
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 85%;
+        }
+        h1 { color: #ff6b81; margin-bottom: 10px; font-size: 1.8rem; }
+        p { color: #555; margin-bottom: 20px; line-height: 1.5; }
+        button {
+            background: #ff6b81;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4);
+        }
+        button:hover { transform: scale(1.05); background: #ff4757; }
+        .hidden-message { display: none; margin-top: 20px; animation: fadeIn 1s forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1 id="title">Ada Surat Buat Kamu! 🎁</h1>
+        <p id="subtitle">Klik tombol di bawah ini buat buka kado digitalnya.</p>
+        
+        <button id="openBtn" onclick="celebrate()">Buka Kado ✨</button>
+
+        <div id="message" class="hidden-message">
+            <p><strong>Selamat Ulang Tahun! 🎉✨</strong></p>
+            <p>Semoga di usia yang baru ini kamu makin bahagia, sehat selalu, dan semua yang kamu cita-citakan bisa tercapai!</p>
+        </div>
+    </div>
+
+    <!-- Musik Latar (Opsional) -->
+    <audio id="hbdSound" src="https://www.soundjay.com/human/applause-01.mp3"></audio>
+
+    <script>
+        function celebrate() {
+            // Efek Konfeti
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            // Ubah Teks & Tampilkan Pesan
+            document.getElementById('title').innerText = "Happy Birthday! 🥳";
+            document.getElementById('subtitle').style.display = "none";
+            document.getElementById('openBtn').style.display = "none";
+            document.getElementById('message').style.display = "block";
+
+            // Putar Suara
+            document.getElementById('hbdSound').play();
+        }
+    </script>
+</body>
+</html>
