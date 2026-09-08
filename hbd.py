@@ -17,7 +17,7 @@ def tampilkan_kue():
        |                      |
        |______________________|
        |                      |
-       |HAPPY BIRTHDAY JAELANI|
+       |HAPPY BIRTHDAY AUNTY LARAS|
        |______________________|
     """
     print(kue)
@@ -31,6 +31,6 @@ print("\n")
 tampilkan_kue()
 time.sleep(1)
 
-mengetik(HAPPY BIRTHDAY TO ME! ✨", 0.08)
-mengetik("cieee 20 thn nih,for my self Semoga panjang umur, sehat selalu,semoga target nya tercapai, dan makin sukses.", 0.05)
-mengetik("Tetap jadi orang baik dan bahagia terus! 🥳🎉", 0.05)
+mengetik(HAPPY BIRTHDAY TO YOUUU AUNTY YANG PALING BEAUTIFUL BEAUTIFULL ANGELL!🥳✨", 0.08)
+mengetik(" CIE CIE NAMBAH TUA AJA NIEE ,TERUNTUK PEREMPUAN YANG BERNAMA "LARAS" SEMOGA PANJANG UMUR,TARGET"NYA TERCAPAI,DAN SEMOGA DIPERTEMUKAN DENGAN JODOHNYA.", 0.05)
+mengetik("TETAPLAH JADI ORANG YANG BAIK DAN RAMAH SENYUM YEE!! 🥳🎉", 0.05)
